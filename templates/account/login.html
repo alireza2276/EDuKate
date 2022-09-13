@@ -1,21 +1,53 @@
 {% include 'navbar.html' %}
 {% load crispy_forms_tags %}
-<div class="container" >
-   <h3> {% block title %}Log In{% endblock %}</h3>
+<div class="container">
+    <h3> {% block title %}Log In{% endblock %}</h3>
 
 </div>
 {% block content %}
-    <div class="container-sm mt-3">
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <input type="submit" value="Log In">
-            <br>
-            <div class="mt-3">
-                <a href="{% url 'account_signup' %}"><span>Create An Account</span></a>
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- <div class="col-md-6 order-md-2">
+                  <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+                </div> -->
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="form-block">
+                                <div class="mb-4">
+                                    <h3>Login to <strong>EDUKATE</strong></h3>
+                                </div>
+                                <form action="#" method="post">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="d-flex mb-5 align-items-center">
+                                        <label class="control control--checkbox mb-0"><span
+                                                class="caption">Remember me</span>
+                                            <input type="checkbox" checked="checked"/>
+                                            <div class="control__indicator"></div>
+                                        </label>
+                                        <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                                    </div>
+
+                                    <input type="submit" value="Log In"
+                                           class="btn btn-pill text-white btn-block btn-primary">
+                                    <br>
+                                    <a href="{% url 'account_signup' %}"><h3 class="btn btn-pill text-white btn-block btn-success"
+                                    >Create An Account</h3></a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </form>
+        </div>
     </div>
+
 
 {% endblock %}
 {% include 'footer.html' %}
