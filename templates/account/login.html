@@ -1,0 +1,22 @@
+{% include 'navbar.html' %}
+{% load crispy_forms_tags %}
+<div class="container" >
+   <h3> {% block title %}Log In{% endblock %}</h3>
+
+</div>
+{% block content %}
+    <div class="container-sm mt-3">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Log In">
+            <br>
+            <div class="mt-3">
+                <a href="{% url 'account_signup' %}"><span>Create An Account</span></a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+{% include 'footer.html' %}
+{% include 'fotter_references.html' %}

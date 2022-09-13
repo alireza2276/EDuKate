@@ -27,7 +27,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
-
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,11 +79,8 @@ TEMPLATES = [
         },
     },
 ]
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 WSGI_APPLICATION = 'EDUKATE.wsgi.application'
 
 # Database
@@ -138,7 +138,5 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-
 # CRISPY_CONFIG
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
