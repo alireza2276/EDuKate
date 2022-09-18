@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Course
+from .models import Course, Category
 
 
 class CourseListView(ListView):
@@ -16,4 +16,7 @@ class CourseDetailView(DetailView):
     context_object_name = 'course'
 
 
-
+def category(request, pk=None):
+    categories = get_object_or_404(Category, id=pk)
+    courses = categories.categories.all()
+    return render(request, 'courses/courses-list.html', {'categories': categories, 'courses': courses})
