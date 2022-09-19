@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 from tinymce.models import HTMLField
@@ -34,6 +35,7 @@ class Course(models.Model):
     level = models.CharField(max_length=50)
     description = HTMLField()
     status = models.BooleanField(default=True)
+    student = models.ManyToManyField(get_user_model(), related_name='student')
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)

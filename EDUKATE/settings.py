@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'context_processors.context_processors.show_category',
                 'context_processors.context_processors.recent_courses',
+                'context_processors.context_processors.show_information',
             ],
         },
     },
