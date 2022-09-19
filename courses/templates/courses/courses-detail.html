@@ -1,4 +1,6 @@
 {% load static %}
+
+{% load crispy_forms_tags %}
 {% include 'navbar.html' %}
 
 <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
@@ -46,51 +48,70 @@
 
                     </div>
 
-                    <h2 class="mb-3">Related Courses</h2>
-                    <div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-1.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
+                    <!-- Comment List -->
+                    <div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">{{ course.comments.count }}
+                                Comments</h3>
+                            {% for comment in course.comments.all %}
+                                {% if comment.parent == None %}
+                                    <div class="media mb-4">
+                                        {% if user.image == True %}
+                                            <img src="{{ comment.image.url }}" alt="Image"
+                                                 class="img-fluid rounded-circle mr-3 mt-1"
+                                                 style="width: 45px;">
+                                        {% else %}
+                                            <img src="{% static 'img/unknown.png' %}" alt="Image"
+                                                 class="img-fluid rounded-circle mr-3 mt-1"
+                                                 style="width: 45px;">
+                                        {% endif %}
+                                        <div class="media-body">
+                                            <h6>{{ comment.author }}<small><i>{{ comment.datetime_created }}</i></small>
+                                            </h6>
+                                            <p>{{ comment.body|safe }}</p>
+                                            <button id="reply" class="btn btn-sm btn-secondary">Reply</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-2.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
+                                    {% for reply in comment.replies.all %}
+                                        <div class="media mb-4">
+                                            <img src="img/user.jpg" alt="Image"
+                                                 class="img-fluid rounded-circle mr-3 mt-1"
+                                                 style="width: 45px;">
+                                            <div class="media-body">
+                                                <h6>{{ reply.author }}<small><i>{{ reply.datetime_created }}</i></small>
+                                                </h6>
+                                                <p>{{ reply.body|safe }}</p>
+                                                <button id="reply" class="btn btn-sm btn-secondary">Reply</button>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <!-- Comment Form -->
+                        <div class="bg rounded p-5">
+                            {% if request.user.is_authenticated %}
+                                <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Leave a comment</h3>
+                                <form id="reply" method="post" action="{% url 'create_comment' course.id %}">
+                                    {% csrf_token %}
+                                    {{ comment_form|crispy }}
+                                    <div class="form-group mb-0">
+                                        <input type="submit" value="Send"
+                                               class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">
                                     </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-3.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                                </form>
+                            {% else %}
+                                <a href="{% url 'account_login' %}"><p class="btn btn-danger">You must first login</p>
+                                </a>
+                            {% endif %}
+
+                        </div>
+
+
                     </div>
+
                 </div>
 
                 <div class="col-lg-4 mt-5 mt-lg-0">
@@ -148,7 +169,7 @@
                                         <small class="text-body mr-3"><i
                                                 class="fa fa-user text-primary mr-2"></i>{{ recent.author }}</small>
                                         <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5
-                                            </small>
+                                        </small>
                                     </div>
                                 </div>
                             </a>

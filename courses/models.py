@@ -45,3 +45,19 @@ class Course(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.author} - {self.price}"
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='comments')
+    image = models.ImageField(upload_to='images/comments', null=True, blank=True)
+    body = HTMLField()
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
+
+    datetime_created = models.DateTimeField(auto_now_add=True)
+
+    def get_absolute_url(self):
+        return reverse('courses_detail', args=[self.course.id])
+
+    def __str__(self):
+        return f"{self.author} - {self.course}"

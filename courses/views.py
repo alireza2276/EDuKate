@@ -1,6 +1,9 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
-from .models import Course, Category, Teacher
+from django.views.generic import ListView, DetailView, CreateView
+
+from .forms import CommentForm
+from .models import Course, Category, Teacher, Comment
 
 
 class CourseListView(ListView):
@@ -15,6 +18,11 @@ class CourseDetailView(DetailView):
     template_name = 'courses/courses-detail.html'
     context_object_name = 'course'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comment_form'] = CommentForm()
+        return context
+
 
 def category(request, pk=None):
     categories = get_object_or_404(Category, id=pk)
@@ -26,3 +34,18 @@ class TeacherListView(ListView):
     model = Teacher
     template_name = 'courses/teacher-list.html'
     context_object_name = 'teachers'
+
+
+class CommentCreateView(CreateView, LoginRequiredMixin):
+    model = Comment
+    form_class = CommentForm
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.author = self.request.user
+
+        course_id = int(self.kwargs['course_id'])
+        course = get_object_or_404(Course, id=course_id)
+        obj.course = course
+
+        return super().form_valid(form)
