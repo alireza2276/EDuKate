@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
@@ -13,15 +14,24 @@ class CourseListView(ListView):
     paginate_by = 3
 
 
-class CourseDetailView(DetailView):
-    model = Course
-    template_name = 'courses/courses-detail.html'
-    context_object_name = 'course'
+# class CourseDetailView(DetailView):
+#     model = Course
+#     template_name = 'courses/courses-detail.html'
+#     context_object_name = 'course'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['comment_form'] = CommentForm()
+#         return context
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['comment_form'] = CommentForm()
-        return context
+
+def course_detail(request, pk):
+    course = get_object_or_404(Course, id=pk)
+    if request.method == 'POST':
+        body = request.POST.get('body')
+        parent_id = request.POST.get('parent_id')
+        Comment.objects.create(body=body, course=course, author=request.user, parent_id=parent_id)
+    return render(request, 'courses/courses-detail.html', context={'course': course})
 
 
 def category(request, pk=None):
