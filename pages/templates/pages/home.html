@@ -1,5 +1,7 @@
-{% extends '_base.html' %}
+
 {% load static %}
+{% include 'navbar.html' %}
+{% include 'header.html' with header_name='Home' %}
 {% block content %}
 
     <!-- About Start -->
@@ -248,3 +250,6 @@
 
 
 {% endblock %}
+
+{% include 'footer.html' %}
+{% include 'fotter_references.html' %}

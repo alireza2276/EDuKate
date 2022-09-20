@@ -59,3 +59,9 @@ class CommentCreateView(CreateView, LoginRequiredMixin):
         obj.course = course
 
         return super().form_valid(form)
+
+
+def search(request):
+    q = request.GET.get('q')
+    courses = Course.objects.filter(title__icontains=q)
+    return render(request, 'courses/courses-list.html', {'courses': courses})
