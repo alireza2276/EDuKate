@@ -1,4 +1,5 @@
-{% include 'navbar.html' %}
+{% load i18n %}
+{% include 'pages/navbar.html' %}
 {% load crispy_forms_tags %}
 <div class="container">
     <h3> {% block title %}Log In{% endblock %}</h3>
@@ -17,25 +18,25 @@
                         <div class="col-md-12">
                             <div class="form-block">
                                 <div class="mb-4">
-                                    <h3>Login to <strong>EDUKATE</strong></h3>
+                                    <h3>ورود <strong>به ادوکیت</strong></h3>
                                 </div>
                                 <form action="#" method="post">
                                     {% csrf_token %}
                                     {{ form|crispy }}
                                     <div class="d-flex mb-5 align-items-center">
                                         <label class="control control--checkbox mb-0"><span
-                                                class="caption">Remember me</span>
+                                                class="caption">مرا به یاد بیار</span>
                                             <input type="checkbox" checked="checked"/>
                                             <div class="control__indicator"></div>
                                         </label>
-                                        <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                                        <span class="ml-auto"><a href="#" class="forgot-pass">فراموشی رمز عبور</a></span>
                                     </div>
 
-                                    <input type="submit" value="Log In"
+                                    <input type="submit" value="ورود"
                                            class="btn btn-pill text-white btn-block btn-primary">
                                     <br>
                                     <a href="{% url 'account_signup' %}"><h3 class="btn btn-pill text-white btn-block btn-success"
-                                    >Create An Account</h3></a>
+                                    >ایجاد حساب کاربری</h3></a>
 
                                 </form>
                             </div>
@@ -50,5 +51,5 @@
 
 
 {% endblock %}
-{% include 'footer.html' %}
+{% include 'pages/footer.html' %}
 {% include 'fotter_references.html' %}

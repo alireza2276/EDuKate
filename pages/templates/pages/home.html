@@ -1,7 +1,9 @@
 
 {% load static %}
-{% include 'navbar.html' %}
-{% include 'header.html' with header_name='Home' %}
+{% load i18n %}
+{% include 'pages/navbar.html' %}
+{% translate 'Home' as x %}
+{% include 'pages/header.html' with header_name=x %}
 {% block content %}
 
     <!-- About Start -->
@@ -251,5 +253,5 @@
 
 {% endblock %}
 
-{% include 'footer.html' %}
+{% include 'pages/footer.html' %}
 {% include 'fotter_references.html' %}

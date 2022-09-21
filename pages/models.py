@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Information(models.Model):
@@ -10,10 +11,10 @@ class Information(models.Model):
 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    subject = models.CharField(max_length=100)
-    body = models.TextField()
+    name = models.CharField(max_length=50, verbose_name=_('name'))
+    email = models.EmailField(verbose_name=_('email'))
+    subject = models.CharField(max_length=100, verbose_name=_('subject'))
+    body = models.TextField(verbose_name=_('body'))
 
     def __str__(self):
         return f"{self.name} - {self.subject}"

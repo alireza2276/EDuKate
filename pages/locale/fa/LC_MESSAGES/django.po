@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-21 20:59+0430\n"
+"PO-Revision-Date: 2022-09-21 19:31+0430\n"
+"Last-Translator:   <ali@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\models.py:14
+msgid "name"
+msgstr "نام"
+
+#: .\models.py:15
+
+msgid "email"
+msgstr "ایمیل"
+
+#: .\models.py:16
+msgid "subject"
+msgstr "موضوع"
+
+#: .\models.py:17
+msgid "body"
+msgstr "متن"
+
+#: .\templates\pages\contact.html:20
+msgid "address"
+msgstr "آدرس"
+
+#: .\templates\pages\contact.html:29
+msgid "Call Us"
+msgstr "تماس"
+
+#: .\templates\pages\contact.html:38
+msgid "Email Us"
+msgstr "ایمیل"
+
+#: .\templates\pages\contact.html:46
+msgid "Need Help?"
+msgstr "سوالی دارید؟"
+
+#: .\templates\pages\contact.html:47
+msgid "Send Us A Message"
+msgstr "ارتباط با ما"
+
+#: .\templates\pages\contact.html:57
+msgid "Send Message"
+msgstr "ارسال"
+
+#: .\templates\pages\home.html:5
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\pages\navbar.html:69
+msgid "EDUKATE"
+msgstr "ادوکیت"
+
+#: .\templates\pages\navbar.html:76
+msgid "home"
+msgstr "خانه"
+
+#: .\templates\pages\navbar.html:77
+msgid "About"
+msgstr "درباره ما"
+
+#: .\templates\pages\navbar.html:78
+msgid "courses"
+msgstr "دوره ها"
+
+#: .\templates\pages\navbar.html:80
+msgid "pages"
+msgstr "صفحات"
+
+#: .\templates\pages\navbar.html:83
+msgid "teachers"
+msgstr "اساتید"
+
+#: .\templates\pages\navbar.html:87
+msgid "contactus"
+msgstr "ارتباط با ما"
+
+#: .\templates\pages\navbar.html:91
+msgid "logout"
+msgstr "خروج"
+
+#: .\templates\pages\navbar.html:94
+msgid "login"
+msgstr "ورود"
+
+#: .\templates\pages\navbar.html:94
+msgid "register"
+msgstr "ثبت نام"

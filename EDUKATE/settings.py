@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'crispy_forms',
+    'rosetta',
 
     # my_app
     'accounts.apps.AccountsConfig',
@@ -120,9 +121,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 # LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'fa-ir'
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 
 USE_I18N = True
 USE_L10N = True
@@ -135,6 +141,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

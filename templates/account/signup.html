@@ -1,7 +1,7 @@
-{% include 'navbar.html' %}
+{% include 'pages/navbar.html' %}
 {% load crispy_forms_tags %}
 <div class="container">
-    <h3> {% block title %}Sign Up{% endblock %}</h3>
+    <h3> {% block title %}فرم ثبت نام{% endblock %}</h3>
 
 </div>
 
@@ -18,7 +18,7 @@
                         <div class="col-md-12">
                             <div class="form-block">
                                 <div class="mb-4">
-                                    <h3>Sign In to <strong>EDUKATE</strong></h3>
+                                    <h3>ثبت نام <strong>در ادوکیت</strong></h3>
                                 </div>
                                 <form action="#" method="post">
                                     {% csrf_token %}
@@ -39,5 +39,5 @@
 
 
 {% endblock %}
-{% include 'footer.html' %}
+{% include 'pages/footer.html' %}
 {% include 'fotter_references.html' %}

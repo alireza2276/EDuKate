@@ -24,5 +24,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls')),
     path('courses/', include('courses.urls')),
+
+    # - rosetta
+    path('rosetta/', include('rosetta.urls')),
+
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

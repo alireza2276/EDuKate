@@ -1,6 +1,10 @@
 {% load static %}
-{% include 'navbar.html' %}
-{% include 'header.html' with header_name='Courses' %}
+{% load i18n %}
+
+{% include 'pages/navbar.html' %}
+{% translate 'Courses' as y %}
+{% include 'pages/header.html' with header_name=y %}
+
 {% block content %}
     <!-- Courses Start -->
     <div class="container-fluid py-5">
@@ -8,8 +12,8 @@
             <div class="row mx-0 justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center position-relative mb-5">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Our Courses</h6>
-                        <h1 class="display-4">Checkout New Releases Of Our Courses</h1>
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">{% translate 'our courses' %}</h6>
+
                     </div>
                 </div>
             </div>
@@ -25,7 +29,7 @@
                                     <div class="d-flex justify-content-between p-4">
                                         <span class="text-white"><i
                                                 class="fa fa-user mr-2"></i>{{ course.author }}</span>
-{#                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5#}
+                                        {#                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5#}
                                         <small>({{ course.student.count }}) Students</small></span>
                                     </div>
                                 </div>
@@ -75,5 +79,5 @@
 
 
 {% endblock %}
-{% include 'footer.html' %}
+{% include 'pages/footer.html' %}
 {% include 'fotter_references.html' %}

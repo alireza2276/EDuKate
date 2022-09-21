@@ -1,4 +1,4 @@
-{% include 'navbar.html' %}
+{% include 'pages/navbar.html' %}
 
 <div class="container">
     <h3> {% block title %}Log Out{% endblock %}</h3>
@@ -6,15 +6,15 @@
 </div>
 {% block content %}
     <div class="container-sm mt-3">
-        <h1 class="btn btn-warning container" style="width: 270px">Are You Sure to Log Out?</h1>
+        <h1 class="btn btn-warning container" style="width: 270px">مطمعنی که میخوای خارج بشی؟</h1>
         <form action="" method="post">
 
             {% csrf_token %}
 
-            <input class="btn btn-success container-md" style="width: 200px" type="submit" value="Yes, I'm Sure.">
+            <input class="btn btn-success container-md" style="width: 200px" type="submit" value="اره مطمعنم">
 
         </form>
     </div>
 {% endblock %}
-{% include 'footer.html' %}
+{% include 'pages/footer.html' %}
 {% include 'fotter_references.html' %}
