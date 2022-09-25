@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 18:52+0330\n"
+"POT-Creation-Date: 2022-09-25 13:49+0330\n"
 "PO-Revision-Date: 2022-09-21 19:31+0430\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,9 +59,42 @@ msgstr "ارتباط با ما"
 msgid "Send Message"
 msgstr "ارسال"
 
-#: .\templates\pages\home.html:5
+#: .\templates\pages\home.html:4
 msgid "Home"
 msgstr "خانه"
+
+#: .\templates\pages\home.html:71
+msgid "Where do I start programming?"
+msgstr "برنامه نویسی رو از کجا شروع کنم؟"
+
+#: .\templates\pages\home.html:73
+msgid ""
+"Programming is a new tool to dominate the world of technology. The best way "
+"to learn this science from the basics and professionally is to take "
+"programming training courses under the supervision of experienced teachers. "
+"Kodiad is a team of expert instructors whose goal is to teach zero to "
+"hundred programming to those who are interested. In addition, many of the "
+"courses available in Kodiad are free and you can go half way without any "
+"cost."
+msgstr ""
+"برنامه‌نویسی ابزاری نوین برای تسلط بر جهان تکنولوژی است. بهترین روش برای "
+"فراگیری این علم از پایه و به صورت تخصصی، گذراندن دوره‌های آموزش برنامه نویسی "
+"زیر نظر مدرسان کارآزموده است. کدیاد، تیمی متشکل از مدرسان متخصص می‌باشد و "
+"هدفشان آموزش صفر تا صد برنامه نویسی به علاقه‌مندان است. در ضمن بسیاری از "
+"دوره‌های موجود در ادوکیت، رایگان بوده و شما می‌توانید نیمی از مسیر را بدون هیچ "
+"هزینه‌ای پیش بروید."
+
+#: .\templates\pages\home.html:125
+msgid "Last Courses"
+msgstr "اخرین بروز رسانی ها"
+
+#: .\templates\pages\home.html:138
+msgid "students"
+msgstr "تعداد دانشجویان"
+
+#: .\templates\pages\home.html:142
+msgid "Course Detail"
+msgstr "جزییات دوره"
 
 #: .\templates\pages\navbar.html:68
 msgid "EDUKATE"
@@ -103,6 +136,5 @@ msgstr "ورود"
 msgid "register"
 msgstr "ثبت نام"
 
-#: .\views.py:21
-msgid "Your messages was sent successfully"
-msgstr "نظر شما با موفقیت ثبت شد."
+#~ msgid "Your messages was sent successfully"
+#~ msgstr "نظر شما با موفقیت ثبت شد."

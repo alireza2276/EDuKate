@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 18:59+0330\n"
+"POT-Creation-Date: 2022-09-25 13:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\courses\courses-detail.html:9
+msgid "courses_detail"
+msgstr "جزییات دوره"
+
+#: .\templates\courses\courses-detail.html:36
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\templates\courses\courses-detail.html:54
+msgid "Reply"
+msgstr "پاسخ به این نظر"
+
+#: .\templates\courses\courses-detail.html:77
+msgid "Leave a comment"
+msgstr "نظرخودراثبت کنید"
+
+#: .\templates\courses\courses-detail.html:91
+msgid "submit"
+msgstr "ارسال"
+
+#: .\templates\courses\courses-detail.html:98
+msgid "You must first login"
+msgstr "برای ثبت نظر ابتدا باید ثبت نام کنید"
+
+#: .\templates\courses\courses-detail.html:111
+msgid "Course Features"
+msgstr "ویژگی های دوره"
+
+#: .\templates\courses\courses-detail.html:113
+msgid "Instructor"
+msgstr "مدرس"
+
+#: .\templates\courses\courses-detail.html:121
+msgid "Lectures"
+msgstr "تعداد قسمت ها"
+
+#: .\templates\courses\courses-detail.html:125
+msgid "Status"
+msgstr "وضعیت دوره"
+
+#: .\templates\courses\courses-detail.html:127
+msgid "True"
+msgstr "در حال برگزاری"
+
+#: .\templates\courses\courses-detail.html:129
+msgid "False"
+msgstr "دوره به پایان رسیده است"
+
+#: .\templates\courses\courses-detail.html:134
+msgid "Duration"
+msgstr "مدت زمان اموزش"
+
+#: .\templates\courses\courses-detail.html:138
+msgid "Skill level"
+msgstr "سطح دوره"
+
+#: .\templates\courses\courses-detail.html:141
+msgid "Course Price"
+msgstr "قیمت دوره"
+
+#: .\templates\courses\courses-detail.html:142
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\courses\courses-detail.html:144
+msgid "Enroll Now"
+msgstr "ثبت نام در دوره"
+
+#: .\templates\courses\courses-detail.html:149
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\templates\courses\courses-detail.html:163
+msgid "Recent Courses"
+msgstr "آخرین دوره ها"
 
 #: .\templates\courses\courses-list.html:5
 msgid "Courses"
