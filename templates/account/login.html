@@ -18,15 +18,14 @@
                         <div class="col-md-12">
                             <div class="form-block">
                                 <div class="mb-4">
-                                    <h3>ورود <strong>به ادوکیت</strong></h3>
+                                    <h3>Login to <strong>EDUKATE</strong></h3>
                                 </div>
                                 <form action="#" method="post">
                                     {% csrf_token %}
                                     {{ form|crispy }}
                                     <div class="d-flex mb-5 align-items-center">
-                                        <label class="control control--checkbox mb-0"><span
-                                                class="caption">مرا به یاد بیار</span>
-                                            <input type="checkbox" checked="checked"/>
+                                        <label class="control control--checkbox mb-0">
+
                                             <div class="control__indicator"></div>
                                         </label>
                                         <span class="ml-auto"><a href="#" class="forgot-pass">فراموشی رمز عبور</a></span>

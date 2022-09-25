@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 from tinymce.models import HTMLField
-
+from django.utils import timezone
 
 class Category(models.Model):
     title = models.CharField(max_length=50)
@@ -37,7 +37,7 @@ class Course(models.Model):
     status = models.BooleanField(default=True)
     student = models.ManyToManyField(get_user_model(), related_name='student')
 
-    datetime_created = models.DateTimeField(auto_now_add=True)
+    datetime_created = models.DateTimeField(default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
 
     def get_absolute_url(self):

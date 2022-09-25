@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 20:59+0430\n"
+"POT-Creation-Date: 2022-09-24 18:52+0330\n"
 "PO-Revision-Date: 2022-09-21 19:31+0430\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,6 @@ msgid "name"
 msgstr "نام"
 
 #: .\models.py:15
-
 msgid "email"
 msgstr "ایمیل"
 
@@ -64,7 +63,7 @@ msgstr "ارسال"
 msgid "Home"
 msgstr "خانه"
 
-#: .\templates\pages\navbar.html:69
+#: .\templates\pages\navbar.html:68
 msgid "EDUKATE"
 msgstr "ادوکیت"
 
@@ -100,6 +99,10 @@ msgstr "خروج"
 msgid "login"
 msgstr "ورود"
 
-#: .\templates\pages\navbar.html:94
+#: .\templates\pages\navbar.html:95
 msgid "register"
 msgstr "ثبت نام"
+
+#: .\views.py:21
+msgid "Your messages was sent successfully"
+msgstr "نظر شما با موفقیت ثبت شد."

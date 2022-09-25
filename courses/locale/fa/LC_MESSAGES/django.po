@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 20:52+0430\n"
+"POT-Creation-Date: 2022-09-24 18:59+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,9 @@ msgid "Our Teachers"
 msgstr "لیست اساتید"
 
 #: .\templates\courses\teacher-list.html:15
-
 msgid "Teachers"
 msgstr "اساتید ما"
+
+#: .\views.py:35
+msgid "Your comment commit successfully"
+msgstr "نظر شما با موفقیت ثبت گردید"

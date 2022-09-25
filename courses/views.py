@@ -1,8 +1,9 @@
+from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import ListView, DetailView, CreateView
-
 from .forms import CommentForm
 from .models import Course, Category, Teacher, Comment
 
@@ -31,6 +32,7 @@ def course_detail(request, pk):
         body = request.POST.get('body')
         parent_id = request.POST.get('parent_id')
         Comment.objects.create(body=body, course=course, author=request.user, parent_id=parent_id)
+        messages.success(request, _('Your comment commit successfully'))
     return render(request, 'courses/courses-detail.html', context={'course': course})
 
 
@@ -65,3 +67,8 @@ def search(request):
     q = request.GET.get('q')
     courses = Course.objects.filter(title__icontains=q)
     return render(request, 'courses/courses-list.html', {'courses': courses})
+
+
+def test(request):
+    messages.success(request, 'this is test')
+    return render(request, 'courses/test.html', {})

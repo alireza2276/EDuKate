@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+from django.contrib.messages import constants as messages
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jalali_date',
 
     # Third_app
     'tinymce',
@@ -50,8 +52,10 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'courses.apps.CoursesConfig',
+    'persian_translate.apps.PersianTranslateConfig',
 
 ]
+
 SITE_ID = 1
 
 MIDDLEWARE = [
@@ -155,3 +159,12 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # CRISPY_CONFIG
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# for messages framework
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+
+}
+

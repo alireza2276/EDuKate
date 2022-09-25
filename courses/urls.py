@@ -8,5 +8,6 @@ urlpatterns = [
     path('teachers/', views.TeacherListView.as_view(), name='teachers_list'),
     path('comment/<int:course_id>/', views.CommentCreateView.as_view(), name='create_comment'),
     path('search/', views.search, name="search_courses"),
+    path('test/', views.test, name='test'),
 
 ]

@@ -1,5 +1,6 @@
 {% load static %}
-
+{% load jalali_tags %}
+{% load persian_translate %}
 {% load crispy_forms_tags %}
 {% include 'pages/navbar.html' %}
 
@@ -44,7 +45,7 @@
                                                  style="width: 45px;">
                                         {% endif %}
                                         <div class="media-body">
-                                            <h6>{{ comment.author }}<small><i>{{ comment.datetime_created }}</i></small>
+                                            <h6>{{ comment.author }}<small><i>{{ comment.datetime_created|to_jalali:'%Y/%m/%d'|translate_persian }}</i></small>
                                             </h6>
                                             <p>{{ comment.body|safe }}</p>
                                             <button onclick="set_value({{ comment.id }})"
@@ -116,17 +117,17 @@
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">Lectures</h6>
-                            <h6 class="text-white my-3">{{ course.lectures }}</h6>
+                            <h6 class="text-white my-3">{{ course.lectures|translate_persian }}</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">Duration</h6>
-                            <h6 class="text-white my-3">{{ course.duration }}</h6>
+                            <h6 class="text-white my-3">{{ course.duration|translate_persian }}</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">Skill level</h6>
                             <h6 class="text-white my-3">{{ course.level }}</h6>
                         </div>
-                        <h5 class="text-white py-3 px-4 m-0">Course Price: ${{ course.price }}</h5>
+                        <h5 class="text-white py-3 px-4 m-0">Course Price: ${{ course.price|translate_persian }}</h5>
                         <div class="py-3 px-4">
                             <a class="btn btn-block btn-secondary py-3 px-5" href="">Enroll Now</a>
                         </div>
@@ -139,7 +140,7 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                     <a href="{% url 'category' cat.id %}"
                                        class="text-decoration-none h6 m-0">{{ cat.title }}</a>
-                                    <span class="badge badge-primary badge-pill">{{ cat.categories.count }}</span>
+                                    <span class="badge badge-primary badge-pill">{{ cat.categories.count|translate_persian }}</span>
                                 </li>
                             {% endfor %}
 

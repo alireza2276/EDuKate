@@ -1,11 +1,12 @@
 {% load static %}
 <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+
     <div class="container text-center my-5 py-5">
         <h1 class="text-white mt-4 mb-4">Learn From Home</h1>
         <h1 class="text-white display-1 mb-5">{{ header_name }}</h1>
         <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
             <div class="input-group">
-                <form id="search_form"  method="GET" action="{% url 'search_courses' %}">
+                <form id="search_form" method="GET" action="{% url 'search_courses' %}">
                     <input type="text" name="q" class="searchText" placeholder="search course..."
                            autocomplete="on">
                 </form>
