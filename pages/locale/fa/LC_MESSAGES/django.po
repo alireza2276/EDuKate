@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-25 16:47+0330\n"
+"POT-Creation-Date: 2022-09-25 21:22+0330\n"
 "PO-Revision-Date: 2022-09-21 19:31+0430\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,25 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\models.py:14
-msgid "name"
-msgstr "نام"
+#: .\models.py:6 .\templates\pages\contact.html:20
+msgid "address"
+msgstr "آدرس"
 
-#: .\models.py:15
+#: .\models.py:7
+msgid "phone"
+msgstr "تلفن"
+
+#: .\models.py:8 .\models.py:18
 msgid "email"
 msgstr "ایمیل"
 
-#: .\models.py:16
+#: .\models.py:9
+msgid "instagram"
+msgstr "اینستاگرام"
+
+#: .\models.py:10
+msgid "linkedin"
+msgstr "لینکدین"
+
+#: .\models.py:13
+msgid "information"
+msgstr "اطلاعات"
+
+#: .\models.py:17
+msgid "name"
+msgstr "نام"
+
+#: .\models.py:19
 msgid "subject"
 msgstr "موضوع"
 
-#: .\models.py:17
+#: .\models.py:20
 msgid "body"
 msgstr "متن"
 
-#: .\templates\pages\contact.html:20
-msgid "address"
-msgstr "آدرس"
+#: .\models.py:26
+msgid "contact"
+msgstr "ارتباط با ما"
 
 #: .\templates\pages\contact.html:29
 msgid "Call Us"
@@ -63,11 +83,28 @@ msgstr "ارسال"
 msgid "Home"
 msgstr "خانه"
 
-#: .\templates\pages\home.html:71
+#: .\templates\pages\home.html:24 .\templates\pages\home.html:30
+#: .\templates\pages\home.html:37
+msgid "All"
+msgstr "همه"
+
+#: .\templates\pages\home.html:24
+msgid "Courses"
+msgstr "دوره ها"
+
+#: .\templates\pages\home.html:30
+msgid "Blogs"
+msgstr "مقالات"
+
+#: .\templates\pages\home.html:37
+msgid "Teachers"
+msgstr "اساتید"
+
+#: .\templates\pages\home.html:54
 msgid "Where do I start programming?"
 msgstr "برنامه نویسی رو از کجا شروع کنم؟"
 
-#: .\templates\pages\home.html:73
+#: .\templates\pages\home.html:56
 msgid ""
 "Programming is a new tool to dominate the world of technology. The best way "
 "to learn this science from the basics and professionally is to take "
@@ -84,16 +121,26 @@ msgstr ""
 "دوره‌های موجود در ادوکیت، رایگان بوده و شما می‌توانید نیمی از مسیر را بدون هیچ "
 "هزینه‌ای پیش بروید."
 
-#: .\templates\pages\home.html:125
+#: .\templates\pages\home.html:108
 msgid "Last Courses"
 msgstr "اخرین بروز رسانی ها"
 
-#: .\templates\pages\home.html:138
+#: .\templates\pages\home.html:121
 msgid "students"
 msgstr "تعداد دانشجویان"
 
-#: .\templates\pages\home.html:142
+#: .\templates\pages\home.html:126
 msgid "Course Detail"
+msgstr "جزییات دوره"
+
+#: .\templates\pages\home.html:179
+
+msgid "Last Blogs"
+msgstr "اخرین بروز رسانی ها"
+
+#: .\templates\pages\home.html:196
+
+msgid "Blog Detail"
 msgstr "جزییات دوره"
 
 #: .\templates\pages\navbar.html:68

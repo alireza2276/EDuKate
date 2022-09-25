@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-25 13:48+0330\n"
+"POT-Creation-Date: 2022-09-25 21:19+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:10 .\models.py:24 .\models.py:37
+msgid "title"
+msgstr "عنوان"
+
+#: .\models.py:12 .\models.py:48 .\models.py:70
+msgid "datetime_created"
+msgstr "تاریخ و زمان ایجاد"
+
+#: .\models.py:19
+msgid "Category"
+msgstr "دسته بندی ها"
+
+#: .\models.py:23
+msgid "name"
+msgstr "نام"
+
+#: .\models.py:25 .\models.py:39 .\models.py:65
+msgid "image"
+msgstr "تصویر"
+
+#: .\models.py:26 .\models.py:44
+msgid "descriptions"
+msgstr "متن"
+
+#: .\models.py:32 .\templates\courses\teacher-list.html:15
+msgid "Teachers"
+msgstr "اساتید"
+
+#: .\models.py:36
+msgid "category"
+msgstr "دسته بندی ها"
+
+#: .\models.py:38 .\models.py:63
+msgid "author"
+msgstr "نویسنده"
+
+#: .\models.py:40
+msgid "price"
+msgstr "قیمت"
+
+#: .\models.py:41
+msgid "lectures"
+msgstr "تعداد قسمت ها"
+
+#: .\models.py:42
+msgid "duration"
+msgstr "مدت زمان اموزش"
+
+#: .\models.py:43
+msgid "level"
+msgstr "سطح دوره"
+
+#: .\models.py:45
+msgid "status"
+msgstr "وضعیت دوره"
+
+#: .\models.py:58
+msgid "courses"
+msgstr " دوره ها"
+
+#: .\models.py:64
+msgid "course"
+msgstr " دوره ها"
+
+#: .\models.py:66
+msgid "body"
+msgstr "متن"
+
+#: .\models.py:68
+msgid "parent"
+msgstr "ریپلای"
+
+#: .\models.py:79
+msgid "comments"
+msgstr "نظرات"
 
 #: .\templates\courses\courses-detail.html:9
 msgid "courses_detail"
@@ -106,10 +182,9 @@ msgstr "همه دوره های ما"
 msgid "Our Teachers"
 msgstr "لیست اساتید"
 
-#: .\templates\courses\teacher-list.html:15
-msgid "Teachers"
-msgstr "اساتید ما"
-
 #: .\views.py:35
 msgid "Your comment commit successfully"
 msgstr "نظر شما با موفقیت ثبت گردید"
+
+#~ msgid "students"
+#~ msgstr "دانشجوها"

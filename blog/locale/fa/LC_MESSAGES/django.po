@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-25 17:16+0330\n"
+"POT-Creation-Date: 2022-09-25 21:03+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\models.py:10
+msgid "title"
+msgstr "عنوان"
+
+#: .\models.py:11 .\templates\blog\blog_detail.html:29
+msgid "author"
+msgstr "نویسنده"
+
+#: .\models.py:12
+msgid "image"
+msgstr "عکس"
+
+#: .\models.py:13
+msgid "view"
+msgstr "تعداد بازدید"
+
+#: .\models.py:14
+msgid "description"
+msgstr "متن"
+
+#: .\models.py:15
+msgid "status"
+msgstr "وضعیت"
+
+#: .\models.py:17
+msgid "datetime_created"
+msgstr "تاریخ و زمان ایجاد"
+
+#: .\models.py:21
+
+msgid "Blogs"
+msgstr "مقالات"
+
 #: .\templates\blog\blog_detail.html:9
 msgid "blog_detail"
 msgstr "جزییات مقاله"
-
-#: .\templates\blog\blog_detail.html:28
-msgid "author"
-msgstr "نویسنده"
 
 #: .\templates\blog\blog_list.html:5
 msgid "blogs"

@@ -5,9 +5,19 @@ admin.site.register(Teacher)
 admin.site.register(Category)
 
 
+class CommentInline(admin.TabularInline):
+    model = Comment
+    fields = ['author', 'course', 'body', ]
+    extra = 0
+
+
 @admin.register(Course)
 class CourseAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     list_display = ['title', 'author', 'price', 'status']
+
+    inlines = [
+        CommentInline,
+    ]
 
 
 @admin.register(Comment)
