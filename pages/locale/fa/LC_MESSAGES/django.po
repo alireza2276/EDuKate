@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-25 13:49+0330\n"
+"POT-Creation-Date: 2022-09-25 16:47+0330\n"
 "PO-Revision-Date: 2022-09-21 19:31+0430\n"
 "Last-Translator:   <ali@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,23 +100,23 @@ msgstr "جزییات دوره"
 msgid "EDUKATE"
 msgstr "ادوکیت"
 
-#: .\templates\pages\navbar.html:76
+#: .\templates\pages\navbar.html:77
 msgid "home"
 msgstr "خانه"
 
-#: .\templates\pages\navbar.html:77
+#: .\templates\pages\navbar.html:79
 msgid "About"
 msgstr "درباره ما"
 
-#: .\templates\pages\navbar.html:78
+#: .\templates\pages\navbar.html:81
 msgid "courses"
 msgstr "دوره ها"
 
-#: .\templates\pages\navbar.html:80
-msgid "pages"
-msgstr "صفحات"
-
 #: .\templates\pages\navbar.html:83
+msgid "blog"
+msgstr "مقالات"
+
+#: .\templates\pages\navbar.html:85
 msgid "teachers"
 msgstr "اساتید"
 
@@ -135,6 +135,9 @@ msgstr "ورود"
 #: .\templates\pages\navbar.html:95
 msgid "register"
 msgstr "ثبت نام"
+
+#~ msgid "pages"
+#~ msgstr "صفحات"
 
 #~ msgid "Your messages was sent successfully"
 #~ msgstr "نظر شما با موفقیت ثبت شد."

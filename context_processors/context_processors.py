@@ -1,5 +1,6 @@
 from courses.models import Category,Course
 from pages.models import Information
+from blog.models import Blog
 
 
 def show_category(request):
@@ -19,5 +20,11 @@ def show_information(request):
     information = Information.objects.all().last()
 
     return {'information': information}
+
+
+def recent_blogs(request):
+    recent_blog = Blog.objects.order_by('-datetime_created')[:4]
+
+    return {'recent_blog': recent_blog}
 
 

@@ -89,6 +89,7 @@ TEMPLATES = [
                 'context_processors.context_processors.show_category',
                 'context_processors.context_processors.recent_courses',
                 'context_processors.context_processors.show_information',
+                'context_processors.context_processors.recent_blogs',
             ],
         },
     },

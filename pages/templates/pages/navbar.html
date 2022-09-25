@@ -79,15 +79,10 @@
                    class="nav-item nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% translate 'About' %}</a>
                 <a href="{% url 'courses_list' %}"
                    class="nav-item nav-link {% if request.resolver_match.url_name == 'courses_list' %}active{% endif %}">{% translate 'courses' %}</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% translate 'pages' %}</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="{% url 'blog_list' %}" class="dropdown-item">Blog</a>
-                        <a href="{% url 'teachers_list' %}"
-                           class="dropdown-item {% if request.resolver_match.url_name == 'teachers_list' %}active{% endif %}">{% translate 'teachers' %}</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    </div>
-                </div>
+                <a href="{% url 'blog_list' %}"
+                   class="nav-item nav-link {% if request.resolver_match.url_name == 'blog_list' %}active{% endif %}">{% translate 'blog' %}</a>
+                <a href="{% url 'teachers_list' %}"
+                   class="nav-item nav-link {% if request.resolver_match.url_name == 'teachers_list' %}active{% endif %}">{% translate 'teachers' %}</a>
                 <a href="{% url 'contact' %}"
                    class="nav-item nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% translate 'contactus' %}</a>
             </div>
