@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'courses.apps.CoursesConfig',
     'persian_translate.apps.PersianTranslateConfig',
+    'blog.apps.BlogConfig',
 
 ]
 

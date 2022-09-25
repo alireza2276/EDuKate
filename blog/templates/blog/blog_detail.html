@@ -1,0 +1,117 @@
+{% load static %}
+{% load jalali_tags %}
+{% load persian_translate %}
+{% load humanize %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% include 'pages/navbar.html' %}
+
+{% translate 'blog_detail' as h %}
+{% include 'pages/header.html' with header_name=h %}
+
+{% block content %}
+
+
+
+    <!-- Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="mb-5">
+                        <div class="section-title position-relative mb-5">
+
+                            <h1 class="display-4">{{ blog.title }}</h1>
+                        </div>
+                        <img class="img-fluid rounded w-100 mb-4" src="{{ blog.image.url }}" alt="Image">
+                        <p>{{ blog.description|safe }}</p>
+
+                    </div>
+
+                </div>
+
+{#                <div class="col-lg-4 mt-5 mt-lg-0">#}
+{#                    <div class="bg-primary mb-5 py-3">#}
+{#                        <h3 class="text-white py-3 px-4 m-0">{% translate 'Course Features' %}</h3>#}
+{#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+{#                            <h6 class="text-white my-3">{% translate 'Instructor' %}</h6>#}
+{#                            <h6 class="text-white my-3">{{ course.author }}</h6>#}
+{#                        </div>#}
+                        {#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+                        {#                            <h6 class="text-white my-3">Rating</h6>#}
+                        {#                            <h6 class="text-white my-3">4.5 <small>(250)</small></h6>#}
+                        {#                        </div>#}
+{#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+{#                            <h6 class="text-white my-3">{% translate 'Lectures' %}</h6>#}
+{#                            <h6 class="text-white my-3">{{ course.lectures|translate_persian }}</h6>#}
+{#                        </div>#}
+{#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+{#                            <h6 class="text-white my-3">{% translate 'Status' %}</h6>#}
+{#                            {% if course.status == True %}#}
+{#                                <h6 class="text-white my-3">{% translate 'True' %}</h6>#}
+{#                            {% else %}#}
+{#                                <h6 class="text-white my-3">{% translate 'False' %}</h6>#}
+{#                            {% endif %}#}
+{##}
+{#                        </div>#}
+{#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+{#                            <h6 class="text-white my-3">{% translate 'Duration' %}</h6>#}
+{#                            <h6 class="text-white my-3">{{ course.duration|translate_persian }}</h6>#}
+{#                        </div>#}
+{#                        <div class="d-flex justify-content-between border-bottom px-4">#}
+{#                            <h6 class="text-white my-3">{% translate 'Skill level' %}</h6>#}
+{#                            <h6 class="text-white my-3">{{ course.level }}</h6>#}
+{#                        </div>#}
+{#                        <h5 class="text-white py-3 px-4 m-0">{% translate 'Course Price' %}:#}
+{#                            {% translate '$' %}{{ course.price|intcomma:False|translate_persian }}</h5>#}
+{#                        <div class="py-3 px-4">#}
+{#                            <a class="btn btn-block btn-secondary py-3 px-5" href="">{% translate 'Enroll Now' %}</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="mb-5">#}
+{#                        <h2 class="mb-3">{% translate 'Categories' %}</h2>#}
+{#                        <ul class="list-group list-group-flush">#}
+{#                            {% for cat in category %}#}
+{#                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">#}
+{#                                    <a href="{% url 'category' cat.id %}"#}
+{#                                       class="text-decoration-none h6 m-0">{{ cat.title }}</a>#}
+{#                                    <span class="badge badge-primary badge-pill">{{ cat.categories.count|translate_persian }}</span>#}
+{#                                </li>#}
+{#                            {% endfor %}#}
+{##}
+{#                        </ul>#}
+{#                    </div>#}
+{##}
+{#                    <div class="mb-5">#}
+{#                        <h2 class="mb-4">{% translate 'Recent Courses' %}</h2>#}
+{#                        {% for recent in recent_course %}#}
+{#                            <a class="d-flex align-items-center text-decoration-none mb-4"#}
+{#                               href="{{ recent.get_absolute_url }}">#}
+{#                                <img class="img-fluid rounded" style="width: 50px" src="{{ recent.image.url }}" alt="">#}
+{#                                <div class="pl-3">#}
+{#                                    <h6>{{ recent.title }}</h6>#}
+{#                                    <div class="d-flex">#}
+{#                                        <small class="text-body mr-3"><i#}
+{#                                                class="fa fa-user text-primary mr-2"></i>{{ recent.author }}</small>#}
+{#                                        <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5#}
+{#                                        </small>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+
+
+
+
+
+{% endblock %}
+
+{% include 'pages/footer.html' %}
+{% include 'fotter_references.html' %}
